@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Getter
 @Entity
@@ -18,7 +17,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class PrivateUser {
 
     @Id @GeneratedValue
-    private AtomicLong id;
+    private long id;
 
     @Column(length = 1, nullable = false)
     private AtomicInteger status;
@@ -33,7 +32,7 @@ public class PrivateUser {
     private Timestamp quit_at;
 
     @Builder
-    public PrivateUser(AtomicLong id, AtomicInteger status, String studentEmail, Timestamp register_at, Timestamp quit_at) {
+    public PrivateUser(long id, AtomicInteger status, String studentEmail, Timestamp register_at, Timestamp quit_at) {
         this.id = id;
         this.status = status;
         this.studentEmail = studentEmail;
