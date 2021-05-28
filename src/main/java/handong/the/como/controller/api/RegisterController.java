@@ -1,6 +1,6 @@
 package handong.the.como.controller.api;
 
-import handong.the.como.dto.UserDTO;
+import handong.the.como.dto.UserDto;
 import handong.the.como.service.RegisterService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,7 @@ public class RegisterController {
     }
 
     @PostMapping("/register/post")
-    public String register(UserDTO userDTO) {
+    public String register(UserDto userDTO) {
         registerService.saveRegister(userDTO);
         return "redirect:/";
     }

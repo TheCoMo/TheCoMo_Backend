@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Setter
 @ToString
 @NoArgsConstructor
-public class UserDTO {
+public class UserDto {
     private long id;
     private String email;
     private String password;
@@ -29,7 +29,7 @@ public class UserDTO {
     }
 
     @Builder
-    public UserDTO(long id, String email, String password, String nickname, String depart) {
+    public UserDto(long id, String email, String password, String nickname, String depart) {
         this.id = id;
         this.email = email;
         this.password = password;

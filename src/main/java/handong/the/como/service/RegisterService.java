@@ -1,12 +1,11 @@
 package handong.the.como.service;
 
-import handong.the.como.dto.UserDTO;
+import handong.the.como.dto.UserDto;
 import handong.the.como.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class RegisterService {
@@ -19,7 +18,7 @@ public class RegisterService {
     }
 
     @Transactional
-    public long saveRegister(UserDTO userDTO) {
+    public long saveRegister(UserDto userDTO) {
         return userRepository.save(userDTO.toEntity()).getId();
     }
 }
